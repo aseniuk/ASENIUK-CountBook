@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="20dp"
+    android:gravity="left">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/enter_name_text_view"/>
+
+        <EditText
+            android:layout_width="190dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/users_name_edit_text"/>
+        <!--android:layout_height="match_parent"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_centerHorizontal="true"-->
+        <!--android:orientation="vertical"-->
+        <!--android:gravity="center">-->
+
+
+        <!--<Button-->
+            <!--android:id="@+id/AddCounterButton"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:text="Add Counter"-->
+            <!--android:layout_marginBottom="50dp"-->
+            <!--android:onClick="addCounterButtonClicked"/>-->
+
+        <!--<TextView-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:text="0"-->
+            <!--android:textSize="100sp"-->
+            <!--android:id="@+id/counterTextView"/>-->
+
+        <!--<Button-->
+            <!--android:id="@+id/ResetButton"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:text="Reset Counter"-->
+            <!--android:layout_marginTop="50dp"-->
+            <!--android:onClick="resetButtonClicked" />-->
+
+        </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingTop="10dp">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/enter_name_button_text"
+            android:onClick="onSendUsersName" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/calling_activity_info_text_view"
+            android:text="@string/calling_activity_message"/>
+
+
+    </LinearLayout>
+
+
+</LinearLayout>
