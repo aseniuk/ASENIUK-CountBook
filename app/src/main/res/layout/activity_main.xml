@@ -1,55 +1,104 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="20dp"
-    android:orientation="vertical"
-    tools:context="com.example.aseniuk.aseniuk_countbook.MainActivity"
-    android:gravity="center|top">
+    tools:context="com.example.aseniuk.aseniuk_countbook.MainActivity">
+
+    <ListView
+        android:id="@+id/mylist"
+        android:layout_width="wrap_content"
+        android:layout_height="326dp"
+        android:layout_above="@+id/counterNumber"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="22dp"
+        android:focusable="false"
+        android:focusableInTouchMode="false"/>
+
+
 
     <LinearLayout
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
-
-        <Button
-            android:id="@+id/AddCounterButton"
-            android:layout_width="100dp"
-            android:layout_height="wrap_content"
-
-            android:text="Add Counter"
-            android:layout_marginBottom="60dp"
-            android:onClick="addCounterButtonClicked"
-            android:layout_weight="0.1"
-            android:textStyle="bold"
-            android:textSize="15sp" />
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_height="match_parent"
-        android:layout_width="match_parent"
-        android:layout_centerHorizontal="true"
+        android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:gravity="right"
-        android:weightSum="1">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Number of counters: "
-            android:textSize="20sp"
-            android:id="@+id/firstTextBox"/>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="0"
-            android:textSize="100sp"
-            android:id="@+id/counterTextView"/>
-
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/linearLayout">
 
     </LinearLayout>
 
+    <EditText
+        android:id="@+id/editText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text=">"
+        android:layout_below="@+id/linearLayout"
+        android:layout_centerHorizontal="true" />
 
-</LinearLayout>
+    <TextView
+        android:id="@+id/counterView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Number of Counters: "
+        android:textSize="20sp"
+        android:layout_alignBaseline="@+id/counterNumber"
+        android:layout_alignBottom="@+id/counterNumber"
+        android:layout_alignLeft="@+id/add_counter_button"
+        android:layout_alignStart="@+id/add_counter_button" />
+
+    <TextView
+        android:id="@+id/counterNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginEnd="20dp"
+        android:layout_marginRight="20dp"
+        android:text="0"
+        android:textSize="50sp" />
+
+    <Button
+        android:id="@+id/add_counter_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Add Counter"
+        android:layout_above="@+id/mylist"
+        android:layout_centerHorizontal="true"
+        android:textStyle="bold"/>
+
+    <Button
+        android:id="@+id/delete_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Delete"
+        android:layout_above="@+id/mylist"
+        android:layout_toLeftOf="@+id/counterNumber"
+        android:layout_toStartOf="@+id/counterNumber"
+        android:textStyle="bold"/>
+
+    <Button
+        android:id="@+id/reset_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Reset"
+        android:layout_above="@+id/mylist"
+        android:layout_toLeftOf="@+id/add_counter_button"
+        android:layout_toStartOf="@+id/add_counter_button"
+        android:textStyle="bold"/>
+
+    <Button
+        android:id="@+id/info_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Item Info"
+        android:layout_above="@+id/counterView"
+        android:layout_toLeftOf="@+id/counterNumber"
+        android:layout_toStartOf="@+id/counterNumber" />
+
+</RelativeLayout>
+
